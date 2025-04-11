@@ -1,0 +1,3 @@
+If you prefer to use image files instead of links, put your images here.
+Image-Assets/imagename.png
+

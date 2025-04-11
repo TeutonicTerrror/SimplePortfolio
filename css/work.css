@@ -1,0 +1,97 @@
+.work-section {
+    padding: 4rem;
+    min-height: 100vh;
+}
+
+.work-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.education-grid,
+.jobs-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 4rem;
+}
+
+.education-card,
+.job-card {
+    padding: 2rem;
+    text-align: center;
+}
+
+.edu-image,
+.job-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+.edu-date,
+.job-date {
+    color: #00ff88;
+    margin: 0.5rem 0;
+}
+
+.glass-nav {
+    position: fixed;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    z-index: 1000;
+}
+
+.hologram-link {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.hologram-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff88, #61dafb);
+    transition: width 0.3s ease;
+}
+
+.hologram-link:hover::before {
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(45deg, #0a0a12, #14141f);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+.mouse-trail {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, var(--cursor-color) 20%, transparent 70%);    border-radius: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    transition: transform 0.3s, left 0.1s, top 0.1s;
+}
